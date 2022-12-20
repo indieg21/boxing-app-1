@@ -1,3 +1,5 @@
+// boxinground.js
+
 // any element in html is treated as an object
 // this object can have special propeties or functions
 sports_title = document.getElementById("sports_title");
