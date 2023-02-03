@@ -2,8 +2,8 @@
 
 // any element in html is treated as an object
 // this object can have special propeties or functions
-sports_title = document.getElementById("sports_title");
-sports_title.innerHTML = sport + " level";
+// sports_title = document.getElementById("sports_title");
+// sports_title.innerHTML = sport + " level";
 // innerHTML refers to everything in between the opening tag
 // and the closing tag of the HTML tag.
 

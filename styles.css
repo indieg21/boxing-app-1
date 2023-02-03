@@ -12,6 +12,26 @@ body {
   letter-spacing: 0.2rem;
 }
 
+.site-uc {
+  text-align: center;
+  font-size: 500%;
+  padding-top: 20%;
+  animation: animate 1.5s linear infinite;
+  color: yellow;
+} 
+ 
+@keyframes animate{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.7;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 .navbar {
   overflow: hidden;
   background-color: #f9e8e9;

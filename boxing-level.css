@@ -10,6 +10,7 @@ html {
     margin: 0;
     font-family: Impact, Helvetica, sans-serif;
     letter-spacing: 0.2rem;
+    
   }
   
   .navbar {
@@ -53,6 +54,7 @@ html {
   
   div.container {
     text-align: center;
+    padding-top: 17%;
   }
   
   ul.myUL {

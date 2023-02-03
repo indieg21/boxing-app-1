@@ -26,17 +26,52 @@
         </div>
 
         <div>
-          <h2 id="command">Jab and Cross</h2>
+          <h2 id="commandElement">Jab and Cross</h2>
+          <div style="color: white; text-align: center; font-size: 32px;">
+            <label id="minutes">00</label>:<label id="seconds">00</label>
+          </div>
+
         </div>
         
         <script>
-          myCommand = document.getElementById('command');
-          myCommand.innerHTML = 'Left Uppercut, Cross';
-          // document.getElementById("command");
-        </script>
+          myCommand = document.getElementById('commandElement');
 
-       
-    
+          var commandsCombinations = ['Left Uppercut, Cross', 'Jab, Cross, Left Hook', 'Cross, Left Hook', 'Cross, Left Hook, Cross', 'Right Uppercut, Left Hook']; 
+
+          let timer = null; // Will hold a reference to the timer
+          let index = 0;    // Keeps track of which array element show next
+
+          function changeCommands() {
+            myCommand.innerHTML = commandsCombinations[index];
+            if(index === commandsCombinations.length-1){
+              clearInterval(timer);
+            } else {
+              index++;
+            }
+          }
+          timer = setInterval(changeCommands, 2000);
+
+          var minutesLabel = document.getElementById("minutes");
+          var secondsLabel = document.getElementById("seconds");
+          var totalSeconds = 0;
+          setInterval(setTime, 1000);
+
+          function setTime() {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds % 60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+          }
+
+          function pad(val) {
+            var valString = val + "";
+            if (valString.length < 2) {
+              return "0" + valString;
+            } else {
+              return valString;
+            }
+          }
+
+        </script>
 </body>
 
 </html>
